@@ -69,4 +69,21 @@ pip install -r requirements.txt
 ```powershell
 python vulnerable_app.py
 
+## XSS mitigation (secure app)
+
+The secure application demonstrates how the same input is handled safely by applying **output encoding / escaping** and avoiding unsafe rendering patterns.
+
+### What changes in the secure version?
+- User input is treated as **data**, not executable code
+- Output is **escaped** before being rendered back to the page
+- The result: the payload is displayed as text instead of being executed by the browser
+
+### Run the secure application
+```powershell
+python secure_app.py
+
+
+```markdown
+**Comparison:** Vulnerable app executes `<script>` input → Secure app renders it as harmless text.
+
 
