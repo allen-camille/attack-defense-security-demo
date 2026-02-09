@@ -86,4 +86,9 @@ python secure_app.py
 ```markdown
 **Comparison:** Vulnerable app executes `<script>` input → Secure app renders it as harmless text.
 
+This illustrates a common real-world vulnerability where insufficient output encoding
+can lead to client-side code execution, impacting user trust and application integrity.
+
+This vulnerability corresponds to OWASP Top 10: A03 – Injection (XSS).
+
 
