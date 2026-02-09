@@ -32,7 +32,41 @@ controls mitigate them.
 
 ## Run locally (Windows / PowerShell)
 
+----
+
+
+---
+
+## XSS demonstration (vulnerable app)
+
+The vulnerable application does not properly validate or escape user input.
+By submitting the following payload in the contact form, arbitrary JavaScript
+is executed in the browser, allowing DOM manipulation.
+
+**Example payload (educational purpose):**
+
+```html
+<script>
+document.body.innerHTML =
+"<h1 style='color:red'>XSS-demo: sidan manipulerad</h1>" +
+"<p>Detta är bara en visuell demonstration.</p>" +
+document.body.innerHTML;
+</script>
+-----
+
+
 ### 1) Create & activate virtual environment
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+
+### 2) Install dependencies
+```powershell
+pip install -r requirements.txt
+
+```markdown
+### 3) Run the vulnerable application
+```powershell
+python vulnerable_app.py
+
+
