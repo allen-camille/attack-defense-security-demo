@@ -1,13 +1,17 @@
 # Attack & Defense Security Demo (Flask)
 
-A small, hands-on demo that contrasts a **vulnerable** and a **secured** Flask application to illustrate how common web vulnerabilities can be exploited and how proper defensive controls mitigate them.
+A small, hands-on demo that contrasts a **vulnerable** and a **secured** Flask application
+to illustrate how common web vulnerabilities can be exploited and how proper defensive
+controls mitigate them.
 
 ## What this repo shows
-- A **vulnerable app** that demonstrates typical unsafe patterns (for educational purposes)
+- A **vulnerable app** that demonstrates typical unsafe patterns (educational purpose)
 - A **secure app** that implements safer patterns (input handling, output encoding, basic hardening)
-- A simple message flow where you can compare behavior side-by-side
+- A simple message flow where behavior can be compared side-by-side
 
-> ⚠️ **Safety note:** The vulnerable app is intentionally insecure. Run locally only (e.g., `127.0.0.1`) and never deploy it to the internet.
+> ⚠️ **Safety note:**  
+> The vulnerable app is intentionally insecure. Run locally only (e.g. `127.0.0.1`)  
+> and never deploy it to the internet.
 
 ---
 
