@@ -26,69 +26,80 @@ controls mitigate them.
 - `vulnerable_app.py` – intentionally insecure version (attack surface)
 - `secure_app.py` – hardened version (defensive controls)
 - `requirements.txt` – dependencies
-- `demo_portal.db` – demo database
+- `screenshots/` – visual comparison of attack vs defense
 
 ---
 
 ## Run locally (Windows / PowerShell)
-
-----
-
-
----
-
-## XSS demonstration (vulnerable app)
-
-The vulnerable application does not properly validate or escape user input.
-By submitting the following payload in the contact form, arbitrary JavaScript
-is executed in the browser, allowing DOM manipulation.
-
-**Example payload (educational purpose):**
-
-```html
-<script>
-document.body.innerHTML =
-"<h1 style='color:red'>XSS-demo: sidan manipulerad</h1>" +
-"<p>Detta är bara en visuell demonstration.</p>" +
-document.body.innerHTML;
-</script>
------
-
 
 ### 1) Create & activate virtual environment
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-### 2) Install dependencies
-```powershell
+2) Install dependencies
+
 pip install -r requirements.txt
 
-```markdown
-### 3) Run the vulnerable application
-```powershell
+XSS demonstration (vulnerable app)
+
+The vulnerable application does not properly validate or escape user input.
+By submitting the following payload in the contact form, arbitrary JavaScript
+is executed in the browser, allowing DOM manipulation.
+
+Example payload (educational purpose)
+
+<script>
+document.body.innerHTML =
+"<h1 style='color:red'>XSS-demo: sidan manipulerad</h1>" +
+"<p>Detta är bara en visuell demonstration.</p>" +
+document.body.innerHTML;
+</script>
+
+3) Run the vulnerable application
+
 python vulnerable_app.py
 
-## XSS mitigation (secure app)
+Submit the payload in the application.
+The browser executes the script and the page is visibly manipulated.
 
-The secure application demonstrates how the same input is handled safely by applying **output encoding / escaping** and avoiding unsafe rendering patterns.
+XSS mitigation (secure app)
 
-### What changes in the secure version?
-- User input is treated as **data**, not executable code
-- Output is **escaped** before being rendered back to the page
-- The result: the payload is displayed as text instead of being executed by the browser
+The secure application demonstrates how the same input is handled safely by applying
+output encoding / escaping and avoiding unsafe rendering patterns.
 
-### Run the secure application
-```powershell
+What changes in the secure version?
+
+User input is treated as data, not executable code
+
+Output is escaped before being rendered back to the page
+
+The result: the payload is displayed as text instead of being executed by the browser
+
+Run the secure application
 python secure_app.py
 
 
-```markdown
-**Comparison:** Vulnerable app executes `<script>` input → Secure app renders it as harmless text.
+Submit the same payload again.
+
+Comparison
+
+Vulnerable app:
+Executes <script> input and allows client-side code execution.
+
+Secure app:
+Renders the same input as harmless text.
 
 This illustrates a common real-world vulnerability where insufficient output encoding
 can lead to client-side code execution, impacting user trust and application integrity.
 
-This vulnerability corresponds to OWASP Top 10: A03 – Injection (XSS).
+Security relevance
 
+This vulnerability corresponds to:
 
+OWASP Top 10 – A03: Injection
+
+Cross-Site Scripting (XSS)
+
+XSS remains one of the most common web vulnerabilities and highlights the importance
+of proper input handling and output encoding in modern web applications.
