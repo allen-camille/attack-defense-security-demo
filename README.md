@@ -93,6 +93,15 @@ Renders the same input as harmless text.
 This illustrates a common real-world vulnerability where insufficient output encoding
 can lead to client-side code execution, impacting user trust and application integrity.
 
+### Visual comparison
+
+**Vulnerable application – XSS executed:**
+![XSS vulnerable](screenshots/xss_vulnerable_app.png)
+
+**Secure application – XSS neutralized:**
+![XSS secure](screenshots/xss_secure_app.png)
+
+
 ## Security relevance
 
 This vulnerability corresponds to:
@@ -103,4 +112,5 @@ Cross-Site Scripting (XSS)
 
 XSS remains one of the most common web vulnerabilities and highlights the importance
 of proper input handling and output encoding in modern web applications.
+
 
