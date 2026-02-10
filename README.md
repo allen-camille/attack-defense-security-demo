@@ -41,7 +41,7 @@ python -m venv .venv
 
 pip install -r requirements.txt
 
-XSS demonstration (vulnerable app)
+## XSS demonstration (vulnerable app)
 
 The vulnerable application does not properly validate or escape user input.
 By submitting the following payload in the contact form, arbitrary JavaScript
@@ -63,7 +63,7 @@ python vulnerable_app.py
 Submit the payload in the application.
 The browser executes the script and the page is visibly manipulated.
 
-XSS mitigation (secure app)
+## XSS mitigation (secure app)
 
 The secure application demonstrates how the same input is handled safely by applying
 output encoding / escaping and avoiding unsafe rendering patterns.
@@ -82,7 +82,7 @@ python secure_app.py
 
 Submit the same payload again.
 
-Comparison
+## Comparison
 
 Vulnerable app:
 Executes <script> input and allows client-side code execution.
@@ -93,7 +93,7 @@ Renders the same input as harmless text.
 This illustrates a common real-world vulnerability where insufficient output encoding
 can lead to client-side code execution, impacting user trust and application integrity.
 
-Security relevance
+## Security relevance
 
 This vulnerability corresponds to:
 
@@ -103,3 +103,4 @@ Cross-Site Scripting (XSS)
 
 XSS remains one of the most common web vulnerabilities and highlights the importance
 of proper input handling and output encoding in modern web applications.
+
