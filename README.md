@@ -101,7 +101,8 @@ can lead to client-side code execution, impacting user trust and application int
 
 **Secure application – XSS neutralized**
 
-<img src="screenshots/xss_secure_app.png" alt="XSS secure app" width="800">
+
+<img width="605" height="315" alt="image" src="https://github.com/user-attachments/assets/ebe4d3da-7dea-45ac-8155-923da3bd941f" />
 
 
 
@@ -115,6 +116,7 @@ Cross-Site Scripting (XSS)
 
 XSS remains one of the most common web vulnerabilities and highlights the importance
 of proper input handling and output encoding in modern web applications.
+
 
 
 
