@@ -44,10 +44,6 @@ on host systems.
 
 ## Run locally (Windows / PowerShell)
 
-
-
-## Run locally (Windows / PowerShell)
-
 ### 1) Create & activate virtual environment
 powershell
 python -m venv .venv
@@ -130,6 +126,7 @@ Cross-Site Scripting (XSS)
 
 XSS remains one of the most common web vulnerabilities and highlights the importance
 of proper input handling and output encoding in modern web applications.
+
 
 
 
