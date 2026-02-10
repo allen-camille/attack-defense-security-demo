@@ -33,7 +33,7 @@ controls mitigate them.
 ## Run locally (Windows / PowerShell)
 
 ### 1) Create & activate virtual environment
-```powershell
+powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
@@ -114,6 +114,7 @@ Cross-Site Scripting (XSS)
 
 XSS remains one of the most common web vulnerabilities and highlights the importance
 of proper input handling and output encoding in modern web applications.
+
 
 
 
