@@ -95,18 +95,12 @@ can lead to client-side code execution, impacting user trust and application int
 
 ### Visual comparison
 
-**Vulnerable application – XSS executed**
+**Vulnerable application – XSS executed:**
+![XSS vulnerable](screenshots/xss_vulnerable_app.png)
 
+**Secure application – XSS neutralized:**
+![XSS secure](screenshots/xss_secure_app.png)
 
-
-
-<img width="605" height="315" alt="image" src="https://github.com/user-attachments/assets/92e91d4b-4d57-4862-8a70-246460410d3d" />
-
-
-**Secure application – XSS neutralized**
-
-
-<img width="605" height="315" alt="image" src="https://github.com/user-attachments/assets/ebe4d3da-7dea-45ac-8155-923da3bd941f" />
 
 
 
@@ -120,6 +114,7 @@ Cross-Site Scripting (XSS)
 
 XSS remains one of the most common web vulnerabilities and highlights the importance
 of proper input handling and output encoding in modern web applications.
+
 
 
 
