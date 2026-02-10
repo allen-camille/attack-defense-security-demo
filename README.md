@@ -29,6 +29,22 @@ controls mitigate them.
 - `screenshots/` – visual comparison of attack vs defense
 
 ---
+## ⚠️ Environment note
+
+This project is intended to be executed in a controlled test environment.
+
+The demonstrations were performed inside a virtual machine / isolated environment
+to avoid any risk to the host system.
+
+Running offensive security demonstrations in isolated environments is a standard
+best practice in cybersecurity, reducing the risk of unintended side effects
+on host systems.
+
+---
+
+## Run locally (Windows / PowerShell)
+
+
 
 ## Run locally (Windows / PowerShell)
 
@@ -114,6 +130,7 @@ Cross-Site Scripting (XSS)
 
 XSS remains one of the most common web vulnerabilities and highlights the importance
 of proper input handling and output encoding in modern web applications.
+
 
 
 
